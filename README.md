@@ -259,6 +259,6 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 |---|---|
 | Gabriel Sosa | Backend / Auth |
 | Javier | Frontend / UI |
-| [Team members] | Database / DevOps |
+| Bruno Fragoso | Database / DevOps |
 
 *Universidad Panamericana — Sistemas y Lenguajes de Código Abierto*
