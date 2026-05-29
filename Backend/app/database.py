@@ -1,19 +1,18 @@
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, DeclarativeBase
+from app.config import settings
 
-# Instancia de SQLAlchemy
-db = SQLAlchemy()
-
-
-def init_db(app):
-    """Inicializar la base de datos"""
-    db.init_app(app)
-    
-    with app.app_context():
-        db.create_all()
+engine = create_engine(settings.DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
-def reset_db(app):
-    """Reiniciar la base de datos (solo para desarrollo)"""
-    with app.app_context():
-        db.drop_all()
-        db.create_all()
+class Base(DeclarativeBase):
+    pass
+
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
