@@ -22,4 +22,4 @@ USER appuser
 EXPOSE 5000
 
 # Comando para ejecutar la aplicación con gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "--timeout", "60", "--access-logfile", "-", "--error-logfile", "-", "wsgi:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
