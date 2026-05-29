@@ -6,7 +6,7 @@ Thank you for your interest in contributing to TickioOSS! This document outlines
 
 ## Code of Conduct
 
-Be respectful, inclusive, and constructive. Harassment or hostile behavior will not be tolerated.
+Please be respectful, inclusive, and constructive. Harassment or hostile behavior will **NOT** be tolerated.
 
 ---
 
